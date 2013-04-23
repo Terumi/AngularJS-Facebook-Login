@@ -7,7 +7,6 @@
     <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
     <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
     <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
-    <script src="//connect.facebook.net/en_US/all.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/services.js"></script>
     <script type="text/javascript" src="js/ctrl.js"></script>
