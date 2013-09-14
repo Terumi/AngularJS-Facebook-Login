@@ -12,8 +12,8 @@ app.factory('Facebook', function ($rootScope) {
                     case 'connected':
                         $rootScope.$broadcast('fb_connected', {facebook_id:response.authResponse.userID});
                         break;
-                    case 'not_authorized' || 'unknown':
-                        // 'not_authorized' || 'unknown': doesn't seem to work
+                    case 'not_authorized':
+                    case 'unknown':
                         FB.login(function (response) {
                             if (response.authResponse) {
                                 $rootScope.$broadcast('fb_connected', {
