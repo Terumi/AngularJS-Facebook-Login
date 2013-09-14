@@ -7,6 +7,10 @@ app.run(function ($rootScope) {
             cookie:true,
             xfbml:true
         });
+        
+        FB.Event.subscribe('auth.statusChange', function(response) {
+            $rootScope.$broadcast("fb_statusChange", {'status': response.status});
+        });
     };
 
     (function (d) {
@@ -20,8 +24,4 @@ app.run(function ($rootScope) {
         js.src = "//connect.facebook.net/en_US/all.js";
         ref.parentNode.insertBefore(js, ref);
     }(document));
-
-    FB.Event.subscribe('auth.statusChange', function(response) {
-        $rootScope.$broadcast("fb_statusChange", {'status': response.status});
-    });
 });
